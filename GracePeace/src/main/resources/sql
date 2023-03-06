@@ -1,0 +1,37 @@
+CREATE TABLE `t_admin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `loginid` varchar(20) NOT NULL COMMENT '로그인아이디',
+  `password` varchar(50) NOT NULL COMMENT '비밀번호',
+  PRIMARY KEY (`id`)
+)
+
+
+CREATE TABLE `t_finance` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `userid` int(11) NOT NULL COMMENT '사용자id',
+  `kind` varchar(50) NOT NULL COMMENT '헌금종류',
+  `price` bigint(20) NOT NULL COMMENT '금액',
+  `offdate` date NOT NULL COMMENT '헌금일자',
+  `memo` varchar(100) DEFAULT NULL COMMENT '메모',
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `t_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `username` varchar(20) NOT NULL COMMENT '성도명',
+  `birthday` varchar(20) DEFAULT NULL COMMENT '주민등록번호',
+  `phone` varchar(20) DEFAULT NULL COMMENT '연락처',
+  `address` varchar(300) DEFAULT NULL COMMENT '주소',
+  `gradename` varchar(20) NOT NULL COMMENT '직분',
+  `regnumber` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `t_expend` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `title` varchar(50) NOT NULL COMMENT '지출명',
+  `price` bigint(20) NOT NULL COMMENT '지출금액',
+  `expdate` date NOT NULL COMMENT '지출일자',
+  `memo` varchar(100) DEFAULT NULL COMMENT '메모',
+  PRIMARY KEY (`id`)
+)

@@ -1,0 +1,43 @@
+@charset "EUC-KR";
+
+body { margin: 0; }
+.zeta-menu-bar {
+  background: #0078AE;
+  width: 100%;
+  height: 40px;
+}
+.zeta-menu { margin: 0; padding: 0; text-align:center;}
+.zeta-menu li {
+  list-style:none;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.zeta-menu li:hover { background: #FFFFFF; }
+.zeta-menu li.expand { background: white; }
+.zeta-menu li.expand>a { color: #0078AE; font-weight:bold; }
+.zeta-menu a {
+  color: white;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.zeta-menu a:hover {
+  color: #0078AE;
+}
+.zeta-menu ul {
+  background: #eee;
+  border: 1px solid silver;
+  display: none;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 180px;
+}
+.zeta-menu ul li { float: none; }
+.zeta-menu ul li.expand { background: #ddd; }
+.zeta-menu ul li.expand a { color: black; }
+.zeta-menu ul a { color: black; }
+.zeta-menu ul ul { left: 100%; top: 0; }
+
